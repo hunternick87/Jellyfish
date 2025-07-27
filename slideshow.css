@@ -5,16 +5,7 @@
  *
  */
 
-/* --- Inherit Theme Font --- */
-#slides-container {
-  font-family: inherit !important;
-}
-
-/*
- * ===================================================================
- * |                        ANIMATION                                |
- * ===================================================================
- */
+/* Animation  */
 
 /* --- Base Slide Transition (Crossfade) --- */
 .slide {
@@ -30,7 +21,7 @@
 @keyframes kenBurns {
   from {
     transform: scale(1);
-    filter: brightness(0.7);
+    filter: brightness(0.6);
   }
   to {
     transform: scale(1.05);
@@ -113,7 +104,7 @@
   max-width: 100% !important;
   max-height: 100% !important;
   object-fit: contain !important;
-  filter: drop-shadow(1px 1px 10px rgba(255, 255, 255, 0.15)) !important;
+  filter: drop-shadow(1px 1px 10px rgba(255, 255, 255, 0.15)) brightness(1.1) blur(0) !important;
 }
 
 
@@ -122,13 +113,13 @@
   left: 5vw !important;
   top: 50vh !important;
   color: #ffffff !important;
-  font-size: 1.2em !important;
+  font-size: 1.1em !important;
 }
 
 .genre {
   left: 5vw !important;
   top: 56vh !important;
-  color: #b0b0b0 !important;
+  color: #cfcfcf !important;
   font-size: 1.1em !important;
 }
 
@@ -136,7 +127,7 @@
   left: 5vw !important;
   top: 60vh !important;
   width: 50% !important;
-  color: #e0e0e0 !important;
+  color: #cfcfcf !important;
 }
 
 .separator-icon {
@@ -194,8 +185,8 @@
 .arrow {
   background-color: rgba(0, 0, 0, 0.5) !important;
   border-radius: 50% !important;
-  width: 50px !important;
-  height: 50px !important;
+  width: 5em !important;
+  height: 5em !important;
   transition: all 0.3s ease !important;
   display: flex !important;
   align-items: center !important;
@@ -220,22 +211,24 @@
     }
     .info-container { top: 50vh !important; }
     .genre { top: 56vh !important; }
-    .plot-container { top: 60vh !important; width: 50% !important; }
+    .plot-container { top: 63vh !important; width: 50% !important; }
     .button-container { top: 74vh !important; }
 
     /* Portrait */
     @media (orientation: portrait) {
-        .gradient-overlay { background: none !important; }
+        .gradient-overlay {
+          background: linear-gradient(to top, rgba(16, 16, 16, .75) 20%, transparent 50%) !important;
+        }
         .logo-container {
             width: 60% !important;
             height: 20vh !important;
             top: 25vh !important;
-            left: 50% !important;
+            left: 20% !important;
             transform: translateX(-50%) !important;
         }
         .info-container, .genre, .plot-container, .button-container {
             width: 80% !important;
-            left: 50% !important;
+            left: 10% !important;
             transform: translateX(-50%) !important;
             text-align: center !important;
             justify-content: center !important;
@@ -250,26 +243,27 @@
 
 /* --- Mobile Layout Fixes --- */
 @media only screen and (max-width: 767px) and (orientation: portrait) {
-  .gradient-overlay { background: none !important; }
+  .gradient-overlay {
+    background: linear-gradient(to top, rgba(16, 16, 16, .75) 20%, transparent 50%) !important;
+  }
   .logo-container {
     width: 80% !important;
     height: 20vh !important;
     top: 25vh !important;
-    left: 50% !important;
+    left: 10% !important;
     transform: translateX(-50%) !important;
     justify-content: center !important;
   }
 
   .info-container, .genre, .button-container, .plot-container {
-    left: 50% !important;
     transform: translateX(-50%) !important;
     width: 90% !important;
     text-align: center !important;
     justify-content: center !important;
+    font-size: 1em !important;
   }
 
-  .info-container { top: 50vh !important; }
+  .info-container {top: 55vh !important;}
   .genre { top: 60vh !important; }
   .plot-container { display: none !important; }
-  .button-container { top: 70vh !important; }
 }
