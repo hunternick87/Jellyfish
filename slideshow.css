@@ -1,0 +1,239 @@
+/*
+ * ===================================================================
+ * |      Jellyfish Slideshow Theme & Fixes (v7)                     |
+ * ===================================================================
+ *
+ * Instructions:
+ * 1. Add this code to your Jellyfin Dashboard > Settings > General > Custom CSS.
+ * 2. This version includes the final styling adjustments for the
+ * play button and logo glow.
+ *
+ */
+
+/* --- Import Google Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap');
+
+/* --- Apply Font and Overrides --- */
+#slides-container {
+  font-family: 'Quicksand', sans-serif !important;
+}
+
+/* --- Backdrop & Gradient Styling --- */
+.backdrop {
+  filter: brightness(0.7) !important;
+}
+
+.backdrop-overlay {
+  background: linear-gradient(to top, rgba(16, 16, 16, 0.95) 5%, rgba(16, 16, 16, 0.5) 25%, transparent 50%) !important;
+}
+
+.gradient-overlay {
+  background: linear-gradient(to right, rgba(16, 16, 16, 0.75) 20%, transparent 60%) !important;
+}
+
+/* --- Logo Styling (FIXED for Dark Logos & Mobile) --- */
+.logo-container {
+  left: 5vw !important;
+  top: 15vh !important;
+  width: 40% !important;
+  height: 30vh !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  position: relative !important;
+}
+
+.logo-container::before {
+    content: '' !important;
+    position: absolute !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 70%) !important;
+    z-index: -1 !important;
+    opacity: 0 !important;
+    transition: opacity 0.3s !important;
+}
+
+.logo-container:has(img[src*="Logo"]) {
+    opacity: 1 !important;
+}
+
+.logo {
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: contain !important;
+  /* Reduced icon glow */
+  filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.15)) !important;
+}
+
+
+/* --- Text & Info Styling --- */
+.info-container {
+  left: 5vw !important;
+  top: 50vh !important;
+  color: #ffffff !important;
+  font-size: 1.2em !important;
+  font-weight: 500 !important;
+}
+
+.genre {
+  left: 5vw !important;
+  top: 56vh !important;
+  color: #b0b0b0 !important;
+  font-size: 1.1em !important;
+}
+
+.plot-container {
+  left: 5vw !important;
+  top: 60vh !important;
+  width: 45% !important;
+  color: #e0e0e0 !important;
+}
+
+.separator-icon {
+  color: var(--primary-accent-color) !important;
+  font-size: 8px !important;
+  margin: 0 10px !important;
+}
+
+/* --- Buttons (Restored Style) --- */
+.button-container {
+  left: 5vw !important;
+  top: 74vh !important;
+  gap: 15px !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.play-button, .detail-button, .favorite-button {
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  color: #ffffff !important;
+  transition: all 0.3s ease !important;
+  backdrop-filter: blur(5px) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-weight: 700 !important;
+}
+
+/* --- Play Button Styling (FIXED) --- */
+.play-button {
+    background-color: var(--secondary-background-color, rgba(255, 255, 255, 0.1)) !important;
+    border-radius: 25px !important; /* Reduced rounding */
+    padding: 12px 24px !important;
+    font-size: 1.1em !important;
+}
+
+.play-button .play-text {
+    display: inline !important;
+}
+
+.play-button::before {
+    margin-right: 8px !important; /* Reduced gap */
+}
+
+/* Circular icon buttons */
+.detail-button, .favorite-button {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-radius: 50% !important;
+  width: 50px !important;
+  height: 50px !important;
+  padding: 0 !important;
+  font-size: 24px !important;
+}
+
+.detail-button::before, .favorite-button::before {
+  margin-right: 0 !important;
+}
+
+
+.play-button:hover, .detail-button:hover, .favorite-button:hover {
+  background-color: var(--primary-accent-color) !important;
+  border-color: var(--primary-accent-color) !important;
+  transform: scale(1.05) !important;
+}
+
+
+/* --- Navigation --- */
+.arrow {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  border-radius: 50% !important;
+  width: 50px !important;
+  height: 50px !important;
+  transition: all 0.3s ease !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.arrow:hover {
+  background-color: var(--primary-accent-color) !important;
+}
+
+.dots-container {
+  display: none !important;
+}
+
+/* --- Tablet & iPad Layout Fixes --- */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    /* Landscape */
+    .logo-container {
+        width: 45% !important;
+        height: 25vh !important;
+        top: 20vh !important;
+    }
+    .info-container { top: 50vh !important; }
+    .genre { top: 56vh !important; }
+    .plot-container { top: 60vh !important; width: 50% !important; }
+    .button-container { top: 74vh !important; }
+
+    /* Portrait */
+    @media (orientation: portrait) {
+        .gradient-overlay { background: none !important; }
+        .logo-container {
+            width: 60% !important;
+            height: 20vh !important;
+            top: 25vh !important;
+            left: 50% !important;
+            transform: translateX(-50%) !important;
+        }
+        .info-container, .genre, .plot-container, .button-container {
+            width: 80% !important;
+            left: 50% !important;
+            transform: translateX(-50%) !important;
+            text-align: center !important;
+            justify-content: center !important;
+        }
+        .info-container { top: 50vh !important; }
+        .genre { top: 58vh !important; }
+        .plot-container { top: 64vh !important; }
+        .button-container { top: 78vh !important; }
+    }
+}
+
+
+/* --- Mobile Layout Fixes --- */
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+  .gradient-overlay { background: none !important; }
+  .logo-container {
+    width: 80% !important;
+    height: 20vh !important;
+    top: 25vh !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    justify-content: center !important;
+  }
+
+  .info-container, .genre, .button-container, .plot-container {
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 90% !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+
+  .info-container { top: 50vh !important; }
+  .genre { top: 60vh !important; }
+  .plot-container { display: none !important; }
+  .button-container { top: 70vh !important; }
+}
