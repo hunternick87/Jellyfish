@@ -1,26 +1,77 @@
 /*
  * ===================================================================
- * |      Jellyfish Slideshow Theme & Fixes (v7)                     |
+ * |                    Jellyfish Slideshow Theme                    |
  * ===================================================================
- *
- * Instructions:
- * 1. Add this code to your Jellyfin Dashboard > Settings > General > Custom CSS.
- * 2. This version includes the final styling adjustments for the
- * play button and logo glow.
  *
  */
 
-/* --- Import Google Fonts --- */
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap');
-
-/* --- Apply Font and Overrides --- */
+/* --- Inherit Theme Font --- */
 #slides-container {
-  font-family: 'Quicksand', sans-serif !important;
+  font-family: inherit !important;
 }
+
+/*
+ * ===================================================================
+ * |                        ANIMATION                                |
+ * ===================================================================
+ */
+
+/* --- Base Slide Transition (Crossfade) --- */
+.slide {
+    background-color: #000 !important;
+    transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* --- Backdrop Animation (Ken Burns) --- */
+.slide.active .backdrop {
+    animation: kenBurns 12s ease-out forwards !important;
+}
+
+@keyframes kenBurns {
+  from {
+    transform: scale(1);
+    filter: brightness(0.7);
+  }
+  to {
+    transform: scale(1.05);
+    filter: brightness(0.7);
+  }
+}
+
+/* --- Content Animation --- */
+/* Default state for all content (when slide is NOT active) */
+.slide .logo-container,
+.slide .info-container,
+.slide .genre,
+.slide .plot-container,
+.slide .button-container {
+    opacity: 0 !important;
+    transform: translateY(30px) !important;
+    transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Active state for all content (when slide IS active) - with staggered delay */
+.slide.active .logo-container,
+.slide.active .info-container,
+.slide.active .genre,
+.slide.active .plot-container,
+.slide.active .button-container {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* Staggered transition delays for a cascade effect */
+.slide.active .logo-container   { transition-delay: 0.2s !important; }
+.slide.active .info-container   { transition-delay: 0.3s !important; }
+.slide.active .genre            { transition-delay: 0.4s !important; }
+.slide.active .plot-container   { transition-delay: 0.5s !important; }
+.slide.active .button-container { transition-delay: 0.6s !important; }
+
+
 
 /* --- Backdrop & Gradient Styling --- */
 .backdrop {
-  filter: brightness(0.7) !important;
+  filter: brightness(0.9) !important;
 }
 
 .backdrop-overlay {
@@ -28,14 +79,14 @@
 }
 
 .gradient-overlay {
-  background: linear-gradient(to right, rgba(16, 16, 16, 0.75) 20%, transparent 60%) !important;
+  background: linear-gradient(to right, rgba(16, 16, 16, 0.75) 20%, transparent 50%) !important;
 }
 
-/* --- Logo Styling (FIXED for Dark Logos & Mobile) --- */
+/* --- Logo Styling --- */
 .logo-container {
   left: 5vw !important;
   top: 15vh !important;
-  width: 40% !important;
+  width: 50% !important;
   height: 30vh !important;
   display: flex !important;
   align-items: center !important;
@@ -62,8 +113,7 @@
   max-width: 100% !important;
   max-height: 100% !important;
   object-fit: contain !important;
-  /* Reduced icon glow */
-  filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.15)) !important;
+  filter: drop-shadow(1px 1px 10px rgba(255, 255, 255, 0.15)) !important;
 }
 
 
@@ -73,7 +123,6 @@
   top: 50vh !important;
   color: #ffffff !important;
   font-size: 1.2em !important;
-  font-weight: 500 !important;
 }
 
 .genre {
@@ -86,73 +135,60 @@
 .plot-container {
   left: 5vw !important;
   top: 60vh !important;
-  width: 45% !important;
+  width: 50% !important;
   color: #e0e0e0 !important;
 }
 
 .separator-icon {
   color: var(--primary-accent-color) !important;
-  font-size: 8px !important;
-  margin: 0 10px !important;
+  font-size: 10px !important;
+  margin: 0 8px !important;
 }
 
 /* --- Buttons (Restored Style) --- */
 .button-container {
   left: 5vw !important;
-  top: 74vh !important;
-  gap: 15px !important;
-  display: flex !important;
-  align-items: center !important;
+  top: 72vh !important;
+  gap: 18px !important;
 }
+
+
+/* ----------- Icon buttons styling ----------- */
 
 .play-button, .detail-button, .favorite-button {
-  border: 1px solid rgba(255, 255, 255, 0.2) !important;
   color: #ffffff !important;
   transition: all 0.3s ease !important;
-  backdrop-filter: blur(5px) !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  font-weight: 700 !important;
+  backdrop-filter: blur(var(--blur)) !important;
 }
 
-/* --- Play Button Styling (FIXED) --- */
+/* Different styling for playbutton */
 .play-button {
-    background-color: var(--secondary-background-color, rgba(255, 255, 255, 0.1)) !important;
-    border-radius: 25px !important; /* Reduced rounding */
-    padding: 12px 24px !important;
+    background-color: var(--secondary-accent-color) !important;
+    border-radius: var(--rounded-cards) !important;
     font-size: 1.1em !important;
 }
 
-.play-button .play-text {
-    display: inline !important;
-}
-
-.play-button::before {
-    margin-right: 8px !important; /* Reduced gap */
-}
-
-/* Circular icon buttons */
 .detail-button, .favorite-button {
   background-color: rgba(255, 255, 255, 0.1) !important;
-  border-radius: 50% !important;
-  width: 50px !important;
-  height: 50px !important;
-  padding: 0 !important;
-  font-size: 24px !important;
 }
 
-.detail-button::before, .favorite-button::before {
-  margin-right: 0 !important;
-}
-
-
-.play-button:hover, .detail-button:hover, .favorite-button:hover {
+/* Hover Effects */
+.play-button:hover {
   background-color: var(--primary-accent-color) !important;
-  border-color: var(--primary-accent-color) !important;
   transform: scale(1.05) !important;
+  color: var(--text-color) !important;
 }
+.detail-button:hover {
+  background-color: #fff!important;
+  transform: scale(1.05) !important;
+  color: #000 !important;
 
+}
+.favorite-button:hover {
+  background-color: #fff!important;
+  transform: scale(1.05) !important;
+  color: #ff0000 !important;
+}
 
 /* --- Navigation --- */
 .arrow {
