@@ -29,6 +29,16 @@
   }
 }
 
+/* For mobile portrait, for some reason the slideshow flickers */
+@keyframes panHorizontally {
+  from {
+    transform: translateX(0) scale(1.1);
+  }
+  to {
+    transform: translateX(-10%) scale(1.1);
+  }
+}
+
 /* --- Content Animation --- */
 /* Default state for all content (when slide is NOT active) */
 .slide .logo-container,
@@ -243,6 +253,9 @@
 
 /* --- Mobile Layout Fixes --- */
 @media only screen and (max-width: 767px) and (orientation: portrait) {
+  .slide.active .backdrop {
+    animation: panHorizontally 12s linear infinite alternate !important;
+  }
   .gradient-overlay {
     background: linear-gradient(to top, rgba(16, 16, 16, .75) 20%, transparent 50%) !important;
   }
