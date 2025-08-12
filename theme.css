@@ -280,7 +280,7 @@ html
 /* == Poster Card Size Reduction (Landscape) == */
 /* Reduces the width of portrait-oriented cards on wider screens in landscape. */
 @media (min-width: 50em) and (orientation: landscape) {
-    .overflowPortraitCard { /* Typically used for cast/crew or "More like this" sections */
+    .overflowPortraitCard { /* used for "More like this" sections */
         width: 15% !important;
     }
 }
@@ -1961,9 +1961,9 @@ h3.tagline {
 }
 
 /* Remove play button from card overlay on mobile detail pages. */
-.layout-mobile .cardOverlayButton-br {
+/* .layout-mobile .cardOverlayButton-br {
     display: none;
-}
+} */
 
 
 /* == Mobile Poster/Backdrop Styling == */
