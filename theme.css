@@ -1610,7 +1610,7 @@ h3.tagline {
 .layout-desktop fieldset.verticalSection-extrabottompadding,
 .layout-tv fieldset.verticalSection-extrabottompadding {
     border-radius: var(--rounded-cards) !important;
-    border-color: #3B3B3B !important; /* Darker border for fieldsets */
+    border-color: var(--secondary-background-transparent) !important;
     padding: 10px 35px 20px 35px !important;
 }
 /* Styles tab navigation within the dashboard (e.g., in server settings sections). */
@@ -1961,9 +1961,9 @@ h3.tagline {
 }
 
 /* Remove play button from card overlay on mobile detail pages. */
-/* .layout-mobile .cardOverlayButton-br {
+.layout-mobile .cardOverlayButton-br {
     display: none;
-} */
+}
 
 
 /* == Mobile Poster/Backdrop Styling == */
