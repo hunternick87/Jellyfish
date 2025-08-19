@@ -70,6 +70,7 @@ progress[aria-valuenow]:before,               /* Progress bar fill (pseudo-eleme
 .layout-desktop #editItemMetadataPage .btnHeaderSave, /* Save button in metadata editor header (Desktop) */
 .layout-desktop .mainDetailButtons .btnPlay,    /* Play button on details page (Desktop) */
 .layout-mobile .mainDetailButtons .btnPlay,     /* Play button on details page (Mobile) */
+.layout-tv .mainDetailButtons .btnPlay,     /* Play button on details page (TV) */
 .playbackProgress>div,                        /* Inner bar of playback progress sliders */
 .iconOsdProgressInner                         /* Inner part of OSD circular progress indicators */
 {
@@ -261,6 +262,7 @@ html
 .channelsContainer,                           /* Container for TV channels */
 .layout-desktop .detailSectionContent,        /* Content area within detail sections (Desktop) - Consider backdrop transparency rules */
 .layout-mobile .detailSectionContent,         /* Content area within detail sections (Mobile) */
+.layout-tv .detailSectionContent,         /* Content area within detail sections (tv) */
 .trackSelections,                            /* Audio/Subtitle track selection area */
 .MuiPaper-root.MuiPopover-paper
 {
@@ -298,11 +300,11 @@ progress::-webkit-progress-value  /* Filled part of the progress bar (WebKit) */
 /* == Default Logo Styling == */
 /* Styles for the Jellyfin logo when a custom one isn't set by the user. */
 .pageTitleWithDefaultLogo {
-    background-image: var(--logo); /* Uses the --logo variable, ensure it's defined in your color scheme files */
+    background-image: var(--logo) !important; /* Uses the --logo variable, ensure it's defined in your color scheme files */
     background-size: 100% !important; /* Make logo responsive within its container */
 }
 /* Desktop logo dimensions and positioning. */
-.layout-desktop .pageTitleWithLogo {
+.layout-tv .pageTitleWithLogo, .layout-desktop .pageTitleWithLogo {
     margin-left: 25px !important;
     height: 60px !important;
     width: 140px !important;
@@ -472,17 +474,21 @@ progress::-webkit-progress-value  /* Filled part of the progress bar (WebKit) */
 
 /* == Header Tabs & Right Section Positioning (Desktop) == */
 /* Fine-tunes positioning and sizing for desktop header elements. */
-.layout-desktop .headerTabs {
+.layout-tv .headerTabs, .layout-desktop .headerTabs {
     margin-bottom: 10px !important;
     margin-left: 60px !important;
     margin-top: -58px !important; /* Negative margin to pull it up relative to other header elements */
     font-size: 12px !important;   /* Custom font size for tabs */
 }
-.layout-desktop .headerRight {
+.layout-tv .headerRight, .layout-desktop .headerRight {
     height: 45px !important;
     padding: 0px 5px !important;
     position: absolute !important; /* Absolute positioning for precise placement */
     right: 12px !important;
+}
+.layout-tv .emby-tab-button {
+    height: 40px !important;
+	font-size: 15px;
 }
 /* Ensures tab buttons align content correctly and have appropriate padding. */
 .emby-tab-button {
@@ -514,10 +520,8 @@ progress::-webkit-progress-value  /* Filled part of the progress bar (WebKit) */
 }
 
 /* == Header Button Icon Alignment == */
-/* Adjusts vertical alignment of icons within header buttons for TV and Mobile. */
-.layout-tv .emby-button-foreground {
-    top: -14px !important; /* TV-specific adjustment */
-}
+/* Adjusts vertical alignment of icons within header buttons for Mobile. */
+
 .layout-mobile .emby-button-foreground {
     text-shadow: -2px 2px 12px #000000eb !important; /* Text shadow for mobile header icons for readability */
 }
@@ -1016,7 +1020,7 @@ h3.tagline {
 
 /* == Card Styling for "Groups" Section (Desktop) == */
 /* Styles the container for grouped information (e.g., ratings, genres, runtime). */
-.layout-desktop .detailsGroupItem {
+.layout-tv .detailsGroupItem, .layout-desktop .detailsGroupItem {
     padding: 5px 15px !important;
     width: fit-content !important; /* Fit to content width */
     max-width: max-content !important;
@@ -1054,10 +1058,17 @@ h3.tagline {
 
 /* == Card Styling for Description Area == */
 /* Wraps the item description/overview in a styled container. */
-.layout-desktop .detailSectionContent { /* This selector is also used for general section content, ensure this is intended or make more specific */
+
+.layout-tv .detailSectionContent{
     background: var(--secondary-background-transparent) !important;
     border-radius: var(--rounded-cards) !important;
-    padding: 40px 20px 10px 20px !important;
+    padding: 10px 20px 10px 20px !important;
+}
+
+.layout-desktop .detailSectionContent {
+    background: var(--secondary-background-transparent) !important;
+    border-radius: var(--rounded-cards) !important;
+    padding: 40px 20px 0px 20px !important;
     margin-top: 40px !important;
 }
 .layout-mobile .detailSectionContent {
@@ -1205,11 +1216,12 @@ h3.tagline {
 /* == Play Button Modification == */
 /* Customizes the text and appearance of the main Play button on the details page. */
 .layout-desktop .mainDetailButtons .btnPlay::after,
+.layout-tv .mainDetailButtons .btnPlay::after,
 .layout-mobile .mainDetailButtons .btnPlay::after {
     content: "Play?" !important; /* Custom text for the play button */
 }
 /* Desktop Play Button Styling. */
-.layout-desktop .mainDetailButtons .btnPlay {
+.layout-tv .mainDetailButtons .btnPlay, .layout-desktop .mainDetailButtons .btnPlay {
     /* Primary accent background is applied globally, this ensures other properties */
     padding-right: 20px !important; /* Padding for the custom text */
     margin-right: 0 !important;     /* Reset any conflicting margins */
@@ -1234,6 +1246,7 @@ h3.tagline {
     box-shadow: 0px 0px 15px 2px rgba(255, 255, 255, .5) !important;
 }
 /* Ensures detail buttons use row direction for flex layout (icon beside text). */
+.layout-tv .mainDetailButtons .detailButton,
 .layout-desktop .mainDetailButtons .detailButton,
 .layout-mobile .mainDetailButtons .detailButton {
     -webkit-flex-direction: row !important;
