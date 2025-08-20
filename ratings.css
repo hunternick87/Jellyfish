@@ -72,6 +72,7 @@
 .mediaInfoOfficialRating[rating='TV-Y'],                   /* US */
 .mediaInfoOfficialRating[rating='U'],                      /* UK / India */
 .mediaInfoOfficialRating[rating='UK-U'],                   /* UK */
+.mediaInfoOfficialRating[rating='GB-U'],                   /* UK */
 .mediaInfoOfficialRating[rating='IN-U'],                   /* India */
 .mediaInfoOfficialRating[rating='C'],                      /* Canada / Australia */
 .mediaInfoOfficialRating[rating='CA-C'],                   /* Canada */
@@ -138,6 +139,7 @@
 .mediaInfoOfficialRating[rating='UK-12'],                  /* UK */
 .mediaInfoOfficialRating[rating='GB-12'],                   /* UK */
 .mediaInfoOfficialRating[rating='UK-12A'],                 /* UK */
+.mediaInfoOfficialRating[rating='GB-12A'],                 /* UK */
 .mediaInfoOfficialRating[rating='IE-12A'],                 /* Ireland */
 .mediaInfoOfficialRating[rating='CA-PG'],                  /* Canada */
 .mediaInfoOfficialRating[rating='AU-PG'],                  /* Australia */
@@ -194,7 +196,7 @@
 .mediaInfoOfficialRating[rating='TV-14'],                  /* US */
 .mediaInfoOfficialRating[rating='15'],                     /* UK */
 .mediaInfoOfficialRating[rating='UK-15'],                  /* UK */
-.mediaInfoOfficialRating[rating='GB-15'],                  /* UK */
+.mediaInfoOfficialRating[rating='GB-15'],                  /* UK */
 .mediaInfoOfficialRating[rating='15A'],                    /* Ireland */
 .mediaInfoOfficialRating[rating='IE-15A'],                 /* Ireland */
 .mediaInfoOfficialRating[rating='14+'],                    /* Canada */
@@ -284,7 +286,7 @@
 .mediaInfoOfficialRating[rating='TV-MA'],                  /* US */
 .mediaInfoOfficialRating[rating='18'],                     /* UK / Ireland */
 .mediaInfoOfficialRating[rating='UK-18'],                  /* UK */
-.mediaInfoOfficialRating[rating='GB-18'],                  /* UK */
+.mediaInfoOfficialRating[rating='GB-18'],                   /* UK */
 .mediaInfoOfficialRating[rating='IE-18'],                  /* Ireland */
 .mediaInfoOfficialRating[rating='18+'],                    /* Canada */
 .mediaInfoOfficialRating[rating='CA-18+'],                 /* Canada (and Quebec) */
@@ -337,6 +339,7 @@
 .mediaInfoOfficialRating[rating='NC-17'],                  /* US */
 .mediaInfoOfficialRating[rating='R18'],                    /* UK */
 .mediaInfoOfficialRating[rating='UK-R18'],                 /* UK */
+.mediaInfoOfficialRating[rating='GB-R18'],                 /* UK */
 .mediaInfoOfficialRating[rating='X18+'],                   /* Australia */
 .mediaInfoOfficialRating[rating='AU-X18+'],                /* Australia */
 .mediaInfoOfficialRating[rating='MX-D'],                   /* Mexico */
