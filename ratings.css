@@ -131,10 +131,12 @@
 .mediaInfoOfficialRating[rating='PG'],                     /* US / UK / Canada / Australia / Ireland etc. */
 .mediaInfoOfficialRating[rating='TV-PG'],                  /* US */
 .mediaInfoOfficialRating[rating='UK-PG'],                  /* UK */
+.mediaInfoOfficialRating[rating='GB-PG'],                   /* UK */
 .mediaInfoOfficialRating[rating='IE-PG'],                  /* Ireland */
 .mediaInfoOfficialRating[rating='12'],                     /* UK */
 .mediaInfoOfficialRating[rating='12A'],                    /* UK / Ireland */
 .mediaInfoOfficialRating[rating='UK-12'],                  /* UK */
+.mediaInfoOfficialRating[rating='GB-12'],                   /* UK */
 .mediaInfoOfficialRating[rating='UK-12A'],                 /* UK */
 .mediaInfoOfficialRating[rating='IE-12A'],                 /* Ireland */
 .mediaInfoOfficialRating[rating='CA-PG'],                  /* Canada */
@@ -192,6 +194,7 @@
 .mediaInfoOfficialRating[rating='TV-14'],                  /* US */
 .mediaInfoOfficialRating[rating='15'],                     /* UK */
 .mediaInfoOfficialRating[rating='UK-15'],                  /* UK */
+.mediaInfoOfficialRating[rating='GB-15'],                  /* UK */
 .mediaInfoOfficialRating[rating='15A'],                    /* Ireland */
 .mediaInfoOfficialRating[rating='IE-15A'],                 /* Ireland */
 .mediaInfoOfficialRating[rating='14+'],                    /* Canada */
@@ -240,6 +243,7 @@
 
 
 /* === RED-ORANGE: Mature / Restricted === */
+.mediaInfoOfficialRating[rating='16+'],                    /* Generic 16+ */
 .mediaInfoOfficialRating[rating='MA15+'],                  /* Australia */
 .mediaInfoOfficialRating[rating='AU-MA15+'],               /* Australia */
 .mediaInfoOfficialRating[rating='FSK-16'],                  /* Germany */
@@ -280,6 +284,7 @@
 .mediaInfoOfficialRating[rating='TV-MA'],                  /* US */
 .mediaInfoOfficialRating[rating='18'],                     /* UK / Ireland */
 .mediaInfoOfficialRating[rating='UK-18'],                  /* UK */
+.mediaInfoOfficialRating[rating='GB-18'],                  /* UK */
 .mediaInfoOfficialRating[rating='IE-18'],                  /* Ireland */
 .mediaInfoOfficialRating[rating='18+'],                    /* Canada */
 .mediaInfoOfficialRating[rating='CA-18+'],                 /* Canada (and Quebec) */

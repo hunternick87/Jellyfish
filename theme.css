@@ -531,13 +531,13 @@ progress::-webkit-progress-value  /* Filled part of the progress bar (WebKit) */
 
 /* == Sidebar Dynamic Styling (Desktop - Default Behavior) == */
 /* Styles for the main navigation drawer (sidebar) to make it appear dynamically (slides in/out). */
-.layout-desktop .mainDrawer:not(.dashboardDocument) { /* Excludes dashboard, where sidebar might be static */
+.layout-desktop .mainDrawer:not(.dashboardDocument) {
     left: -320px !important; /* Initially positioned off-screen to the left */
     z-index: 1099 !important; /* High z-index to appear above other content */
     border-top-right-radius : var(--rounded-cards) !important;
     border-bottom-right-radius : var(--rounded-cards) !important;
     background: var(--secondary-background-color) !important;
-    backdrop-filter: blur(25px) !important; /* No blur when it's a solid background */
+    backdrop-filter: blur(25px) !important;
     width: 275px !important;
     transition: transform .24s ease-out,left .26s ease-out,-webkit-transform .24s ease-out !important; /* Smooth transition for sliding */
 }
@@ -556,6 +556,7 @@ progress::-webkit-progress-value  /* Filled part of the progress bar (WebKit) */
 /* Basic styling for the mobile sidebar. */
 .layout-mobile .mainDrawer {
     width: 250px !important;
+    backdrop-filter: blur(25px) !important;
 }
 .layout-mobile .mainDrawer-scrollContainer {
     margin-top: 15px !important; /* Top margin for scrollable content */
@@ -1626,6 +1627,11 @@ h3.tagline {
     border-color: var(--secondary-background-transparent) !important;
     padding: 10px 35px 20px 35px !important;
 }
+
+.layout-mobile fieldset.verticalSection-extrabottompadding {
+    border-radius: var(--rounded-cards) !important;
+    border-color: var(--secondary-background-transparent) !important;
+}
 /* Styles tab navigation within the dashboard (e.g., in server settings sections). */
 .localnav {
     border-radius: 50px;
@@ -1651,6 +1657,18 @@ h3.tagline {
     padding-left: 2px;
 }
 
+/* Background for plugin change log and plugin author details */
+.css-10dubda, .css-1xnox0e {
+    background: var(--secondary-background-transparent) !important;
+}
+ /* Plugin page success message */
+.css-1s2cwil {
+    background: #228b2296 !important;
+}
+/* Failure or warning in plugin page */
+.css-1fl3wau {
+    background-color: #8b0000d9;
+}
 
 /* == Specific Dashboard Page Adjustments == */
 /* Adds top margin to specific dashboard pages for better layout. */
