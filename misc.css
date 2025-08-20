@@ -65,3 +65,53 @@
     height: 25px !important;
   }
 }
+
+
+/*
+================================================================================
+|                         COLLECTION PAGE                                       |
+================================================================================
+*/
+
+.layout-desktop #itemDetailPage:has([data-type="BoxSet"]) .detailImageContainer .card {
+    position: fixed!important;
+    top: 15vh !important;
+    max-width: 250px;
+    min-width: 180px;
+}
+
+.layout-desktop #itemDetailPage:has([data-type="BoxSet"]) .mainDetailButtons {
+    display: none;
+}
+.layout-desktop #itemDetailPage:has([data-type="BoxSet"]) .itemDetailsGroup {
+    display: none;
+}
+
+.layout-desktop #itemDetailPage:has([data-type="BoxSet"]) .detailSectionContent {
+    display: none;
+}
+
+.layout-desktop #itemDetailPage:has([data-type="BoxSet"]) .itemMiscInfo-primary > .mediaInfoItem:not(:first-child) {
+    display: none !important;
+}
+
+.layout-desktop #itemDetailPage:has([data-type="BoxSet"]) .nameContainer {
+    top: -10vh !important;
+    left: 18vw !important;
+}
+
+.layout-desktop #itemDetailPage:has([data-type="BoxSet"]) .itemMiscInfo {
+    top: -12vh !important;
+    left: 17.5vw !important;
+}
+
+.layout-desktop #itemDetailPage:has([data-type="BoxSet"]) .collectionItems {
+    position: absolute !important;
+    top: 20vh !important;
+    left: 18vw !important;
+}
+
+.layout-desktop #itemDetailPage:has([data-type="BoxSet"]) .sectionTitleContainer {
+    margin: 0px;
+    margin-left: -50px;
+}
