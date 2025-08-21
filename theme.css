@@ -534,10 +534,9 @@ progress::-webkit-progress-value  /* Filled part of the progress bar (WebKit) */
 .layout-desktop .mainDrawer:not(.dashboardDocument) {
     left: -320px !important; /* Initially positioned off-screen to the left */
     z-index: 1099 !important; /* High z-index to appear above other content */
-    border-top-right-radius : var(--rounded-cards) !important;
-    border-bottom-right-radius : var(--rounded-cards) !important;
-    background: var(--secondary-background-color) !important;
-    backdrop-filter: blur(25px) !important;
+    border-top-right-radius : 30px !important;
+    border-bottom-right-radius : 30px !important;
+    backdrop-filter: blur(30px) !important;
     width: 275px !important;
     transition: transform .24s ease-out,left .26s ease-out,-webkit-transform .24s ease-out !important; /* Smooth transition for sliding */
 }
@@ -556,7 +555,9 @@ progress::-webkit-progress-value  /* Filled part of the progress bar (WebKit) */
 /* Basic styling for the mobile sidebar. */
 .layout-mobile .mainDrawer {
     width: 250px !important;
-    backdrop-filter: blur(25px) !important;
+    backdrop-filter: blur(50px) !important;
+	border-top-right-radius : 30px !important;
+    border-bottom-right-radius : 30px !important;
 }
 .layout-mobile .mainDrawer-scrollContainer {
     margin-top: 15px !important; /* Top margin for scrollable content */
@@ -1844,36 +1845,31 @@ h3.tagline {
 /* ~~~~~~~~~~~~~~~~~~~~ BACKDROP SUPPORT ~~~~~~~~~~~~~~~~~~~~ */
 /* Styles that apply when item backdrops (background images) are enabled and visible. */
 
-/* == Translucent Cards on Item Detail Page (with Backdrop) == */
-/* Makes various sections on the item detail page translucent when a backdrop is shown and transparency is not disabled. */
-.layout-desktop #itemDetailPage:not(.noBackdropTransparency) .detailSectionContent,
-.layout-desktop #itemDetailPage:not(.noBackdropTransparency) .trackSelections {
+/* == Translucent Cards on Item Detail Page  == */
+/* Makes various sections on the item detail page translucent */
+.layout-desktop #itemDetailPage .detailSectionContent,
+.layout-desktop #itemDetailPage .trackSelections {
     background: var(--secondary-background-transparent) !important; /* Use theme's transparent background */
     backdrop-filter: blur(var(--blur)) !important; /* Apply theme blur */
 }
 
-/* == Transparent/Gradient Drawer (with Backdrop) == */
-/* Styles the main navigation drawer with a gradient and blur when a backdrop is visible. */
-.layout-desktop .backgroundContainer.withBackdrop + div .mainDrawer, /* Desktop */
-.layout-mobile .backgroundContainer.withBackdrop + div .mainDrawer  /* Mobile */
+/* == Transparent/Gradient Drawer  == */
+.backgroundContainer.withBackdrop + div .mainDrawer
 {
     background: var(--secondary-background-transparent) !important; /* Darker gradient */
-    backdrop-filter: blur(var(--blur)) !important;
+    backdrop-filter: blur(50px) !important;
     border-top-right-radius: 30px !important; /* Rounded corners for the drawer */
     border-bottom-right-radius: 30px !important; /* Rounded corners for the drawer */
 }
-/* Fallback: Solid background for the drawer when backdrop transparency is disabled. */
-.layout-desktop:has(#itemDetailPage.noBackdropTransparency) .mainDrawer,
-.layout-mobile:has(#itemDetailPage.noBackdropTransparency) .mainDrawer {
-    background: var(--secondary-background-color) !important;
-    backdrop-filter: none !important; /* Ensure no blur */
-}
+
 /* Fallback for browsers not supporting :has() (e.g., JMP). */
 @supports not selector(:has(*)) {
     /* Simpler transparent background with blur for desktop JMP. */
     .layout-desktop .backgroundContainer.withBackdrop + div .mainDrawer {
         background: transparent !important;
-        backdrop-filter: blur(var(--blur)) !important;
+        backdrop-filter: blur(50px) !important;
+        border-top-right-radius: 30px !important; /* Rounded corners for the drawer */
+        border-bottom-right-radius: 30px !important; /* Rounded corners for the drawer */
     }
     /* Creates a pseudo-element to simulate a solid background behind the static drawer area on JMP when backdrop transparency is off. */
     .layout-desktop #itemDetailPage.noBackdropTransparency::after {
