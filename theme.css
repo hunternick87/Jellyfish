@@ -430,6 +430,7 @@ progress::-webkit-progress-value  /* Filled part of the progress bar (WebKit) */
 	max-width: 50vw !important;         /* Limit maximum width */
     width: fit-content !important;      /* Fit width to content */
     transition: background-color 0.2s ease; /* Smooth background transition */
+    border-radius: 100px !important;    /* Start with applied Border Radius */
 }
 /* Desktop-specific margin for tab/home buttons. */
 .layout-desktop .homeLibraryButton,
