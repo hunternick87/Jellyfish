@@ -195,14 +195,18 @@ progress::-webkit-progress-value,             /* Progress bar fill for WebKit br
 /* == Hover Color for Movie Card Overlays == */
 /* Sets a semi-transparent background on movie card hover. */
 .card-hoverable:hover .cardOverlayContainer {
-    background: var(--secondary-background-transparent); /* Uses a theme variable, ensure this is defined or use a direct rgba value */
+    background: var(--secondary-background-transparent);
 }
 
- .cardOverlayContainer > .cardOverlayFab-primary {
+.cardOverlayContainer > .cardOverlayFab-primary {
     background-color: transparent !important;
-    color: var(--primary-accent-color);
-  }
+    color: var(--primary-accent-color) !important;
+}
 
+/* Hide watched and favorite buttons on card hover */
+.cardOverlayButtonIcon:is(.playstatebutton-icon-unplayed, .playstatebutton-icon-played, .favorite) {
+    display: none !important;
+}
 
 /* ~~~~~~~~~~~~~~~~~~~~ SPECIFIC ELEMENT BACKGROUNDS (NON-ACCENT) ~~~~~~~~~~~~~~~~~~~~ */
 /* Defines specific background colors for particular buttons or elements, not tied to the theme accent. */
@@ -648,6 +652,12 @@ progress::-webkit-progress-value  /* Filled part of the progress bar (WebKit) */
     height: 4em !important;
     font-size: 10px;
 }
+
+/* Make device cards and media library cards smaller for compact layout */
+#devicesPage .cardScalable, #mediaLibraryPage .cardScalable {
+  height: 10vh;
+}
+
 /* ~~~~~~~~~~~~~~~~~~~~ LAYOUT - MOBILE HEADER ~~~~~~~~~~~~~~~~~~~~ */
 /* Styles specific to the mobile header behavior and appearance. */
 
@@ -1566,6 +1576,17 @@ h3.tagline {
     background: var(--alt-accent-color) !important;
 }
 
+/* Change colors for options dropdown */
+.emby-select option {
+  background-color: rgba(var(--primary-r), var(--primary-g), var(--primary-b), 0.2);
+  color: var(--text-color);
+}
+
+/* Selected option */
+.emby-select option:checked {
+  background-color: rgb(var(--primary-r), var(--primary-g), var(--primary-b));
+}
+
 /* Background for dashboard menu on mobile */
 .MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation16.MuiDrawer-paper.MuiDrawer-paperAnchorLeft {
     background: var(--secondary-background-color) !important;
@@ -1633,6 +1654,11 @@ h3.tagline {
     border-radius: var(--rounded-cards) !important;
     border-color: var(--secondary-background-transparent) !important;
 }
+
+#itemDetailPage .verticalSection .itemsContainer.padded-right {
+    padding-right: 0 !important;
+}
+
 /* Styles tab navigation within the dashboard (e.g., in server settings sections). */
 .localnav {
     border-radius: 50px;
@@ -2065,3 +2091,4 @@ h3.tagline {
     margin-left: 11px !important;
     margin-top: 11px !important;
 }
+
