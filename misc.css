@@ -109,10 +109,9 @@
 /* Card playbutton styling */
 .cardOverlayContainer>.cardOverlayFab-primary {
     background-color: var(--primary-accent-color) !important;
-    color: var(--text-color);
+    color: var(--text-color) !important;
     font-size: 80% !important;
     z-index: 2;
-    left: unset;
     margin-left: unset;
     margin-top: unset;
     top: unset;
@@ -132,7 +131,7 @@
     position: absolute;
     inset: 0;
     transform: translateY(-50%) translateX(0);
-    background: linear-gradient(0deg, transparent, var(--primary-accent-color) 45%, var(--secondary-accent-color) 55%, transparent);
+    background: linear-gradient(0deg, transparent, var(--primary-accent-color) 45%, var(--secondary-accent-color) 55%, transparent) !important;
 }
 
 .card.card-hoverable:hover .cardOverlayContainer:after {
