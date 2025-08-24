@@ -59,7 +59,6 @@ body, h1, h2, h3, h4, h5, h6, p {
 
 /* == Primary Accent Backgrounds == */
 /* Applied to main interactive element backgrounds indicating a primary action or state. */
-.emby-checkbox:checked+span+.checkboxOutline, /* Checked checkboxes outline */
 .selectionCommandsPanel,                      /* Toolbar for selected items */
 .countIndicator,                              /* Unwatched count on cards */
 .MuiButton-root.MuiButton-containedSizeMedium, /* Material UI medium contained buttons */
@@ -96,6 +95,9 @@ progress[aria-valuenow]:before,               /* Progress bar fill (pseudo-eleme
     background: var(--secondary-accent-color) !important;
     backdrop-filter: blur(25px) !important;
 }
+.formDialogHeader h3 {
+    font-weight: 800;
+}
 
 .formDialogContent {
     background: var(--secondary-background-transparent) !important;
@@ -128,8 +130,6 @@ progress::-webkit-progress-value,             /* Progress bar fill for WebKit br
 
 /* == Accent Color for Borders == */
 /* Applies primary accent color to borders of interactive or focused elements. */
-.emby-checkbox:checked+span+.checkboxOutline, /* Outline of checked checkboxes */
-.emby-checkbox:focus:not(:checked)+span+.checkboxOutline, /* Outline of focused (but not checked) checkboxes */
 .emby-input:focus,                            /* Focused text input fields */
 .emby-textarea:focus,                         /* Focused textarea fields */
 .emby-select-withcolor:focus,                 /* Focused select dropdowns with color indication */
@@ -333,14 +333,22 @@ progress::-webkit-progress-value  /* Filled part of the progress bar (WebKit) */
 .dialog {
     background-color: var(--secondary-background-color) !important; /* Re-affirm background, could be inherited */
     border-radius: var(--rounded-cards) !important;
+    border: 1px solid var(--alt-accent-color);
 }
 /* Margin for titles within action sheets (a type of dialog). */
 .actionSheetTitle {
     margin: 10px 20px !important;
 }
 
+.actionSheetMenuItem.emby-button:hover, .listItem:hover {
+    background-color: var(--secondary-accent-color) !important; /* Accent color on hover */
+    border-radius: var(--rounded-cards) !important;
+}
+
 .actionSheetContent {
-    background: var(--secondary-background-transparent);
+    background: var(--secondary-background-transparent) !important;
+    backdrop-filter: var(--blur) !important;
+    border-radius: var(--rounded-cards) !important;
 }
 
 /* == Mobile Cast & Crew Card Size == */
@@ -801,10 +809,38 @@ progress::-webkit-progress-value  /* Filled part of the progress bar (WebKit) */
 }
 
 .itemSelectionPanel {
-    border: 1px solid var(--primary-accent-color) !important;
+    border: none !important;
+    background-color: transparent !important;
     border-radius: var(--rounded-cards) !important;
 }
 
+.checkboxOutline.multiSelectCheckboxOutline {
+    width: 100% !important;
+    height: 100% !important;
+}
+.checkboxOutline {
+    border-radius: var(--rounded-cards) !important;
+}
+.emby-checkbox:checked+span+.checkboxOutline.multiSelectCheckboxOutline {
+	background: rgba(var(--primary-r), var(--primary-g), var(--primary-b), 0.5) !important;
+    border: 5px solid var(--primary-accent-color) !important;
+    backdrop-filter: var(--blur) !important;
+}
+
+.itemSelectionPanel .material-icons.check:before {
+    content: 'check';
+    font-size: 5em !important;
+    color: white !important;
+    text-shadow: 0 0 15px rgba(0,0,0,0.7);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cardText-secondary+.itemSelectionPanel>.checkboxContainer, .cardText.cardTextCentered:not(.cardText-secondary,.cardText-first)+.itemSelectionPanel>.checkboxContainer {
+    height: calc(100% - 3em);
+}
 
 /* Removes default background from card padders to rely on cardBox or image. */
 .cardPadder {
@@ -972,7 +1008,25 @@ a.emby-button.homeLibraryButton.raised:hover::before {
         background: #00000085 !important; /* Default dark semi-transparent background */
     }
 }
+/* ~~~~~~~~~~~~~~~~~~~~ SEARCH & FILTERING ~~~~~~~~~~~~~~~~~~~~ */
 
+
+/* Styles the buttons in the A-Z alpha picker */
+.alphaPickerButton {
+    color: #888 !important;
+    font-weight: 600;
+    transition: color 0.2s ease, transform 0.2s ease !important;
+}
+
+.alphaPickerButton:hover {
+    color: #fff !important;
+    transform: scale(1.1) !important;
+}
+
+.alphaPickerButton-selected {
+    color: var(--primary-accent-color) !important;
+    transform: scale(1.2) !important;
+}
 /* ~~~~~~~~~~~~~~~~~~~~ DETAILS PAGE (Restored Original Layout Focus) ~~~~~~~~~~~~~~~~~~~~ */
 /* Styles aimed at restoring or customizing the layout of the item details page. */
 
@@ -1603,7 +1657,6 @@ h3.tagline {
 /* Applies a smaller, consistent rounding to buttons and select elements. */
 .button-submit,
 .emby-select,
-.checkboxOutline,
 .btnRefresh,
 #btnShutdown,
 .raised, /* General raised buttons */
