@@ -91,15 +91,14 @@ progress[aria-valuenow]:before,               /* Progress bar fill (pseudo-eleme
     backdrop-filter: blur(var(--blur)) !important;
 }
 
-.dialog-fixedSize.dialog-small .formDialogHeader,
-.dialog-fixedSize.dialog-small .formDialogFooter {
+.formDialogHeader,
+.formDialogFooter {
     background: var(--secondary-accent-color) !important;
-    backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px) !important;
 }
 
-/* This targets the main content area inside those same dialogs */
-.dialog-fixedSize.dialog-small .formDialogContent {
-    background: var(--secondary-background-transparent);
+.formDialogContent {
+    background: var(--secondary-background-transparent) !important;
 }
 
 .iconOsdProgressOuter   /* Outer ring of OSD circular progress indicators */
