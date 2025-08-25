@@ -59,6 +59,7 @@ body, h1, h2, h3, h4, h5, h6, p {
 
 /* == Primary Accent Backgrounds == */
 /* Applied to main interactive element backgrounds indicating a primary action or state. */
+.emby-checkbox:checked+span+.checkboxOutline, /* Checked checkboxes outline */
 .selectionCommandsPanel,                      /* Toolbar for selected items */
 .countIndicator,                              /* Unwatched count on cards */
 .MuiButton-root.MuiButton-containedSizeMedium, /* Material UI medium contained buttons */
@@ -130,6 +131,8 @@ progress::-webkit-progress-value,             /* Progress bar fill for WebKit br
 
 /* == Accent Color for Borders == */
 /* Applies primary accent color to borders of interactive or focused elements. */
+.emby-checkbox:checked+span+.checkboxOutline, /* Outline of checked checkboxes */
+.emby-checkbox:focus:not(:checked)+span+.checkboxOutline, /* Outline of focused (but not checked) checkboxes */
 .emby-input:focus,                            /* Focused text input fields */
 .emby-textarea:focus,                         /* Focused textarea fields */
 .emby-select-withcolor:focus,                 /* Focused select dropdowns with color indication */
@@ -841,6 +844,11 @@ progress::-webkit-progress-value  /* Filled part of the progress bar (WebKit) */
 .cardText-secondary+.itemSelectionPanel>.checkboxContainer, .cardText.cardTextCentered:not(.cardText-secondary,.cardText-first)+.itemSelectionPanel>.checkboxContainer {
     height: calc(100% - 3em);
 }
+
+.itemSelectionPanel .checkboxContainer {
+    height: calc(100% - 1.5em);
+}
+
 
 /* Removes default background from card padders to rely on cardBox or image. */
 .cardPadder {
