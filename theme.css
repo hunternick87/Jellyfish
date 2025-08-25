@@ -76,9 +76,7 @@ html {
 }
 
 .libraryDocument.withSectionTabs .backgroundContainer {
-    backdrop-filter: blur(var(--blur)) !importan
-
-t;
+    backdrop-filter: blur(var(--blur)) !important;
 }
 
 /* Secondary, often slightly transparent, backgrounds for elements like drawers, dialogs, and content sections. */
@@ -1763,28 +1761,24 @@ h3.tagline {
 }
 
 
-/* ~~~~~~~~~~~~~~~~~~~~ MOBILE & TV SPECIFIC STYLES ~~~~~~~~~~~~~~~~~~~~ */
+/* ~~~~~~~~~~~~~~~~~~~~ MOBILE SPECIFIC FIXES AND CHANGES ~~~~~~~~~~~~~~~~~~~~ */
 
-.layout-mobile .detailPageWrapperContainer,
-.layout-tv .detailPageWrapperContainer {
+.layout-mobile .detailPageWrapperContainer {
     padding-top: 1em !important;
 }
 
-.layout-mobile .cardOverlayButton-br,
-.layout-tv .cardOverlayButton-br {
+.layout-mobile .cardOverlayButton-br{
     display: none;
 }
 
-.layout-mobile .itemBackdrop,
-.layout-tv .itemBackdrop {
+.layout-mobile .itemBackdrop{
     margin: 0 !important;
     opacity: .5 !important;
     height: 50vh !important;
     mask-image: linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 15%);
 }
 
-.layout-mobile .detailLogo,
-.layout-tv .detailLogo {
+.layout-mobile .detailLogo {
     display: block !important;
     position: inherit !important;
     width: 70% !important;
@@ -1796,20 +1790,17 @@ h3.tagline {
 }
 
 @media (orientation: landscape) {
-    .layout-mobile .detailLogo,
-    .layout-tv .detailLogo {
+    .layout-mobile .detailLogo {
         width: 80% !important;
         left: 20% !important;
     }
 }
 
-.layout-mobile .mainDetailButtons,
-.layout-tv .mainDetailButtons {
+.layout-mobile .mainDetailButtons {
     justify-content: center;
     padding-top: 10px !important;
 }
-.layout-mobile .detailPageContent,
-.layout-tv .detailPageContent {
+.layout-mobile .detailPageContent {
     padding-right: 0 !important;
 }
 
