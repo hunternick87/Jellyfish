@@ -104,6 +104,33 @@ progress[aria-valuenow]:before,               /* Progress bar fill (pseudo-eleme
     background: var(--secondary-background-transparent) !important;
 }
 
+.formDialog:has(.formDialogHeader-clear) .formDialogContent {
+    background: none !important;
+}
+
+.formDialog .formDialogFooter-clear {
+    margin-top: 1em !important;
+    margin-bottom: 0px !important;
+    padding: 1em;
+}
+
+.layout-mobile .dialog-fullscreen-lowres .formDialogHeader-clear {
+	border-radius: var(--rounded-cards) !important;
+	margin-left: 0em !important;
+}
+
+.layout-mobile .dialog-fullscreen-lowres .formDialogFooter-clear {
+    background: none !important;
+}
+
+.formDialogHeader.formDialogHeader-clear.justify-content-center {
+    width: 100%;
+	margin-bottom: 1em !important;
+}
+
+.formDialogHeader.formDialogHeader-clear .formDialogHeaderTitle {
+	margin-left: 0em !important;
+}
 .iconOsdProgressOuter   /* Outer ring of OSD circular progress indicators */
 {
     background: #ffffffc0 !important;
