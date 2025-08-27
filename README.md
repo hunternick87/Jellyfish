@@ -24,7 +24,7 @@ Login page backgrounds from [@ksushlapush](https://unsplash.com/@ksushlapush)
 
 <table align="center">
   <tr>
-    <th style="text-align:center">Home</th>
+    <th style="text-align:center; text-decoration: none;">Home<sup><a href="https://github.com/IAmParadox27/jellyfin-plugin-media-bar/" target="_blank" style="text-decoration: none;">**</a></sup></th>
     <th style="text-align:center">Item Details</th>
   </tr>
   <tr>
