@@ -4,13 +4,11 @@ on:
   push:
     branches:
       - main
+    paths:
+      - '*.css'
     paths-ignore:
-      - '**/README.md'
-      - 'logos/**'
-      - 'fonts/**'
-      - 'scripts/**'
-      - 'screenshots/**'
       - 'misc.css'
+
   workflow_dispatch:
 
 permissions:
