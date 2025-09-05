@@ -4,10 +4,14 @@ on:
   push:
     branches:
       - main
-    paths:
-      - '*.css'
     paths-ignore:
+      - '.github/**'
+      - 'fonts/**'
+      - 'logos/**'
+      - 'screenshots/**'
+      - 'scripts/**'
       - 'misc.css'
+      - 'README.md'
 
   workflow_dispatch:
 
