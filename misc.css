@@ -90,3 +90,27 @@
     opacity: 0.5;
 }
 
+
+/* Banners on Collections */
+.verticalSection .cardImageContainer::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 25%;
+  max-width: 10em;
+  aspect-ratio: 1/1;
+  pointer-events: none;
+  z-index: 6;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.verticalSection.OSCARS .cardImageContainer::after {
+  background-image: url('https://github.com/jackkerouac/aphrodite/blob/main/images/awards/yellow/oscars.png?raw=true');
+}
+
+.verticalSection.IMDB_250 .cardImageContainer::after {
+  background-image: url('https://github.com/jackkerouac/aphrodite/blob/main/images/awards/yellow/imdb.png?raw=true');
+}
