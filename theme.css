@@ -639,7 +639,7 @@ progress::-webkit-progress-value  /* Filled part of the progress bar (WebKit) */
     margin-bottom: 3px !important;
     border-radius: 10px !important; /* Rounded corners */
     transition: .2s !important;     /* Smooth transitions for hover effects */
-    text-shadow: 1px 1px 5px var(--text-color);
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
 }
 /* Hover effect for non-selected sidebar buttons. */
 .navMenuOption:hover:not(.navMenuOption-selected) {
@@ -2004,7 +2004,7 @@ h3.tagline {
     background: var(--primary-background-transparent) !important; /* Use theme's transparent background on hover */
     color: var(--primary-accent-color) !important;
     backdrop-filter: blur(var(--blur)) !important;
-    text-shadow: 1px 1px 5px var(--text-color);
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
 }
 
 /* == Mobile Backdrop Image Adjustments == */
