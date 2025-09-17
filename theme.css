@@ -1118,6 +1118,7 @@ h3.tagline {
 /* Wraps the main action buttons (Play, Watched, Favorite) in a blurred card-like container. */
 .mainDetailButtons {
     margin-top: 1.5em;          /* Spacing above the buttons */
+    flex-wrap: wrap;
 }
 
 /* == Card Styling for "Groups" Section (Desktop) == */
@@ -1342,15 +1343,12 @@ h3.tagline {
     border-radius: var(--rounded-cards) !important;
 }
 /* Hover effect for Play button (brightness increase). */
-.layout-desktop .mainDetailButtons .btnPlay:hover,
-.layout-mobile .mainDetailButtons .btnPlay:hover  {
+.mainDetailButtons .btnPlay:hover  {
     filter: brightness(120%);
     box-shadow: 0px 0px 15px 2px rgba(255, 255, 255, .5) !important;
 }
 /* Ensures detail buttons use row direction for flex layout (icon beside text). */
-.layout-tv .mainDetailButtons .detailButton,
-.layout-desktop .mainDetailButtons .detailButton,
-.layout-mobile .mainDetailButtons .detailButton {
+.mainDetailButtons .detailButton{
     -webkit-flex-direction: row !important;
     flex-direction: row !important;
 }
@@ -1372,7 +1370,7 @@ h3.tagline {
 
 /* == Animations for Details Page == */
 /* Logo slide-in animation. */
-.detailLogo { /* This selector might conflict with the main logo rule if properties differ significantly. */
+.detailLogo {
     animation: slideInLogo 0.8s ease-out;
 }
 @keyframes slideInLogo {
