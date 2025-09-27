@@ -131,6 +131,8 @@
 /* === YELLOW: Parental Guidance Suggested === */
 .mediaInfoOfficialRating[rating='PG'],                     /* US / UK / Canada / Australia / Ireland etc. */
 .mediaInfoOfficialRating[rating='TV-PG'],                  /* US */
+.mediaInfoOfficialRating[rating='GP'],                    /* US (Legacy) */
+.mediaInfoOfficialRating[rating='10'],                   /* From some shows */
 .mediaInfoOfficialRating[rating='UK-PG'],                  /* UK */
 .mediaInfoOfficialRating[rating='GB-PG'],                   /* UK */
 .mediaInfoOfficialRating[rating='IE-PG'],                  /* Ireland */
@@ -238,7 +240,8 @@
 .mediaInfoOfficialRating[rating='PH-PG-13'],               /* Philippines */
 .mediaInfoOfficialRating[rating='ID-13+'],                 /* Indonesia */
 .mediaInfoOfficialRating[rating='VN-T13'],                 /* Vietnam */
-.mediaInfoOfficialRating[rating='NZ-M'] {                  /* New Zealand */
+.mediaInfoOfficialRating[rating='NZ-M'],                   /* New Zealand */
+.mediaInfoOfficialRating[rating='-12'] {                   /* For some shows */
     background-color: #E65100 !important; /* Dark Orange */
     border-color: #FF9800 !important;
 }
@@ -275,7 +278,11 @@
 .mediaInfoOfficialRating[rating='VN-T16'],                 /* Vietnam */
 .mediaInfoOfficialRating[rating='NZ-R13'],                 /* New Zealand */
 .mediaInfoOfficialRating[rating='IE-16'],                  /* Ireland */
-.mediaInfoOfficialRating[rating='CA-16+'] {                /* Canada (Quebec) */
+.mediaInfoOfficialRating[rating='CA-16+'],                /* Canada (Quebec) */
+.mediaInfoOfficialRating[rating='MA 15+'],                /* For some shows */
+.mediaInfoOfficialRating[rating='-16'],                   /* For some shows */
+.mediaInfoOfficialRating[rating='16'],                    /* For some shows */
+.mediaInfoOfficialRating[rating='M16'] {                   /* For some shows */
     background-color: red !important; /* Red Orange */
     border-color: #FF5722 !important;
 }
