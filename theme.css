@@ -419,8 +419,9 @@ progress::-webkit-progress-value  /* Filled part of the progress bar (WebKit) */
 
 /* == Header Base Styling == */
 /* Basic transparency and padding for the main header. */
-.skinHeader {
-    background-color: transparent !important; /* Ensures header starts transparent */
+.skinHeader, .skinHeader-withBackground.osdHeader {
+    background-color: transparent !important;
+    background: transparent !important;
 }
 .layout-desktop .skinHeader,
 .layout-tv .skinHeader {
