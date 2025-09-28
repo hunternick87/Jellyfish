@@ -439,7 +439,7 @@ progress::-webkit-progress-value  /* Filled part of the progress bar (WebKit) */
     border-radius: 100px !important; /* Creates the pill shape */
     color: var(--secondary-background-color) !important; /* Text color, assuming a light header background means dark text */
     backdrop-filter: blur(50px) !important; /* Strong blur effect */
-    box-shadow: 0 6px 18px rgba(0,0,0,0.25) !important;
+    box-shadow: 0px 0px 10px 10px rgba(0,0,0,0.25) !important;
 }
 
 /* == Header Button Hover & Focus (Right Section) == */
@@ -519,14 +519,14 @@ progress::-webkit-progress-value  /* Filled part of the progress bar (WebKit) */
 /* == Header Tabs & Right Section Positioning (Desktop) == */
 /* Fine-tunes positioning and sizing for desktop header elements. */
 .layout-tv .headerTabs, .layout-desktop .headerTabs {
-    margin-bottom: 10px !important;
+    margin-bottom: 100% !important;
     margin-left: 60px !important;
     margin-top: -58px !important; /* Negative margin to pull it up relative to other header elements */
     font-size: 12px !important;   /* Custom font size for tabs */
 }
 .layout-tv .headerRight, .layout-desktop .headerRight {
     height: 45px !important;
-    padding: 0px 5px !important;
+    padding: 2px 5px !important;
     position: absolute !important; /* Absolute positioning for precise placement */
     right: 12px !important;
 }
