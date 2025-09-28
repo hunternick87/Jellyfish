@@ -5,6 +5,10 @@
  *
  */
 
+#slides-container {
+  height: 100vh !important;
+  margin-top: -2em !important;
+}
 /* Animation  */
 
 /* --- Base Slide Transition (Crossfade) --- */
