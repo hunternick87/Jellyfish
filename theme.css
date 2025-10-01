@@ -741,17 +741,13 @@ progress::-webkit-progress-value  /* Filled part of the progress bar (WebKit) */
 }
 /* Styling for mobile header tabs (pill shape, light background, blur). */
 .layout-mobile .headerTabs {
-    background-color: rgba(207, 221, 233, 0.35) !important; /* Light, Zesty-like background */
-    border-radius: 100px !important;
     height: 40px !important;
     font-size: 12px !important;
-    margin-left: auto !important;   /* Centering tabs */
+    margin-left: auto !important;
     margin-right: auto !important;
     width: auto !important;
     max-width: 100% !important;
-    backdrop-filter: blur(50px) !important;
-    box-shadow: 1px 3px 6px rgba(var(--secondary-background-color),.5);
-    color: var(--secondary-background-color) !important;
+    margin-bottom: 1em !important;
 }
 /* Ensure mobile tab buttons match the height of the tabs container. */
 .layout-mobile .emby-tab-button {
