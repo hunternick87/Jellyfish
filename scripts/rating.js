@@ -12,14 +12,40 @@
         targetSelector: '.mediaInfoOfficialRating',
         attributeName: 'rating',
         fallbackInterval: 1000, // Fallback polling interval
-        debounceDelay: 100, // Debounce delay for rapid changes
-        maxRetries: 3
+        debounceDelay: 100,      // Debounce delay for rapid changes
+        maxRetries: 3,
+        cssUrl: 'https://cdn.jsdelivr.net/gh/n00bcodr/Jellyfish@main/ratings.css', // URL for the CSS
+        cssId: 'jellyfin-ratings-style' // ID for the style element to prevent duplicates
     };
 
     let observer = null;
     let fallbackTimer = null;
     let debounceTimer = null;
     let processedElements = new WeakSet();
+
+    /**
+     * Injects the custom CSS file into the document's head.
+     */
+    function injectCSS() {
+        // Check if the CSS has already been injected
+        if (document.getElementById(CONFIG.cssId)) {
+            return;
+        }
+
+        try {
+            const linkElement = document.createElement('link');
+            linkElement.id = CONFIG.cssId;
+            linkElement.rel = 'stylesheet';
+            linkElement.type = 'text/css';
+            linkElement.href = CONFIG.cssUrl;
+
+            document.head.appendChild(linkElement);
+            console.log("Jellyfin Rating Script: Custom CSS injected successfully.");
+        } catch (error) {
+            console.error("Jellyfin Rating Script: Failed to inject CSS.", error);
+        }
+    }
+
 
     /**
      * Processes rating elements and applies attributes
@@ -196,11 +222,14 @@
         // Clean up any existing instances
         cleanup();
 
+        // Inject the custom CSS
+        injectCSS();
+
         // Process existing elements immediately
         processRatingElements();
 
         // Set up efficient monitoring
-        const observerSetup = setupMutationObserver();
+        setupMutationObserver();
 
         // Always set up fallback polling as backup
         setupFallbackPolling();
