@@ -56,53 +56,96 @@
 
 /*
 ================================================================================
-|                         COLLECTION PAGE                                       |
+|                          Video Player OSD                                    |
 ================================================================================
 */
 
-.layout-desktop #itemDetailPage:has([data-type="BoxSet"]) .detailImageContainer .card {
-    position: fixed!important;
-    top: 15vh !important;
-    max-width: 250px;
-    min-width: 180px;
+
+.videoOsdBottom .osdControls [dir="ltr"] .paper-icon-button-light {
+	position: fixed;
+	top: 49vh;
+	left: 30vw;
+	font-size: 2vw;
+	transition: font-size 0.1s ease-in-out;
+	transform: translateX(-50%) translateY(-50%);
+	background: var(--primary-background-transparent);
+
 }
 
-.layout-desktop #itemDetailPage:has([data-type="BoxSet"]) .mainDetailButtons {
-    display: none;
-}
-.layout-desktop #itemDetailPage:has([data-type="BoxSet"]) .itemDetailsGroup {
-    display: none;
+.videoOsdBottom .btnPreviousTrack:hover,
+.videoOsdBottom .btnPreviousChapter:hover,
+.videoOsdBottom .btnRewind:hover,
+.videoOsdBottom .btnPause:hover,
+.videoOsdBottom .btnFastForward:hover,
+.videoOsdBottom .btnNextChapter:hover,
+.videoOsdBottom .btnNextTrack:hover {
+	font-size: 2.2vw !important;
+	background: var(--secondary-background-transparent) !important;
+
 }
 
-.layout-desktop #itemDetailPage:has([data-type="BoxSet"]) .detailSectionContent {
-    display: none;
+@media (max-width: 33.75em) {
+	.videoOsdBottom .paper-icon-button-light {
+		font-size: 3vw !important;
+	}
+
+	.videoOsdBottom .btnPreviousTrack:hover,
+	.videoOsdBottom .btnPreviousChapter:hover,
+	.videoOsdBottom .btnRewind:hover,
+	.videoOsdBottom .btnPause:hover,
+	.videoOsdBottom .btnFastForward:hover,
+	.videoOsdBottom .btnNextChapter:hover,
+	.videoOsdBottom .btnNextTrack:hover {
+		font-size: 3.2vw !important;
+		background: var(--secondary-background-transparent) !important;
+
+	}
 }
 
-.layout-desktop #itemDetailPage:has([data-type="BoxSet"]) .itemMiscInfo-primary > .mediaInfoItem:not(:first-child) {
-    display: none !important;
+.osdControls .btnPreviousTrack {
+	left: 20% !important;
+	filter: drop-shadow(-3px 0px 2px rgba(2, 2, 2, 0.8));
 }
 
-.layout-desktop #itemDetailPage:has([data-type="BoxSet"]) .nameContainer {
-    top: -10vh !important;
-    left: 18vw !important;
+.osdControls .btnPreviousChapter {
+	left: 30% !important;
+	filter: drop-shadow(-3px 0px 2px rgba(2, 2, 2, 0.8));
 }
 
-.layout-desktop #itemDetailPage:has([data-type="BoxSet"]) .itemMiscInfo {
-    top: -12vh !important;
-    left: 17.5vw !important;
+.osdControls .btnRewind {
+	left: 40% !important;
+	filter: drop-shadow(-3px 0px 2px rgba(2, 2, 2, 0.8));
 }
 
-.layout-desktop #itemDetailPage:has([data-type="BoxSet"]) .collectionItems {
-    position: absolute !important;
-    top: 20vh !important;
-    left: 18vw !important;
+.osdControls .btnPause {
+	left: 50% !important;
+	filter: drop-shadow(0px 0px 3px rgba(2, 2, 2, 0.8));
 }
 
-.layout-desktop #itemDetailPage:has([data-type="BoxSet"]) .sectionTitleContainer {
-    margin: 0px;
-    margin-left: -50px;
+.osdControls .btnFastForward {
+	left: 60% !important;
+	filter: drop-shadow(3px 0px 2px rgba(2, 2, 2, 0.8));
 }
 
+.osdControls .btnNextChapter {
+	left: 70% !important;
+	filter: drop-shadow(3px 0px 2px rgba(2, 2, 2, 0.8));
+}
+
+.osdControls .btnNextTrack {
+	left: 80% !important;
+	filter: drop-shadow(3px 0px 2px rgba(2, 2, 2, 0.8));
+}
+
+.osdTimeText {
+	margin-left: 2.4em;
+}
+
+@media (hover: hover) and (pointer: fine) {
+	.videoOsdBottom .paper-icon-button-light:hover:not(:disabled) {
+		background-color: #0009 !important;
+	}
+}
 
 /* ----------------------------------------------------------- */
 
