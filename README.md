@@ -14,7 +14,67 @@ I've made a few tweaks and modifications of my own.
 Login page backgrounds from [@ksushlapush](https://unsplash.com/@ksushlapush)
 
 
+## 📑 Table of Contents
+
+  - [Installation](#installation)
+    - [Globally for all users](#globally-for-all-users)
+    - [User/Device-Specific Theme (Display Settings)](#userdevice-specific-theme-display-settings)
+  - [Theme](#theme)
+    - [📝 Companion Scripts](#-companion-scripts)
+    - [🎨 Colors:](#-colors)
+  - [Recommended Plugins](#recommended-plugins)
+  - [🧪 Compatibility](#-compatibility)
+  - [Enjoying Jellyfish?](#enjoying-jellyfish)
+
+
+## Installation
+
+### Globally for all users
+
+
+To apply a theme globally to all users via the Dashboard:
+
+1.  **Navigate to Dashboard Settings**
+    -   Log in as an administrator
+    -   Go to **Dashboard** → **General** → **Custom CSS Code**
+2.  **Add Import Statement**
+    -   In the Custom CSS field, add all the desired `@import` statements:
+
+```css
+   @import url("https://cdn.jsdelivr.net/gh/n00bcodr/jellyfish@main/theme.css");
+   @import url("https://cdn.jsdelivr.net/gh/n00bcodr/jellyfish@main/indicators.css");
+   @import url("https://cdn.jsdelivr.net/gh/n00bcodr/jellyfish@main/indicators.css");
+   /* Any other imports or custom CSS will go here */
+```
+3.  **Save Changes**
+    -   Click **Save** at the bottom of the page
+    -   Refresh your browser to see the changes
+
+### User/Device-Specific Theme (Display Settings)
+
+Individual users can apply the theme to their own account without affecting others:
+
+1.  **Navigate to User Settings**
+    -   Click on your profile icon
+    -   Go to **Settings** → **Display** → **Custom CSS Code**
+2.  **Add Import Statement**
+    -   In the Custom CSS field, add your `@import` statement:
+
+
+```css
+   @import url("https://cdn.jsdelivr.net/gh/n00bcodr/Jellyfish/colors/peach.css");
+```
+
+3.  **Save and Refresh**
+    -   Click **Save**
+    -   Refresh the page to apply the theme
+
+> [!Note]
+> If you only want to change the color you can simply add import statement for the color you want. <br>
+> If you want to replace the entire CSS for that device, you can choose 'Disable server-provided custom CSS code' and add the CSS statements in user display settings page as you prefer.
+
 ----
+## Theme
 \
 **Main Theme with JellyBlue as default**
 
@@ -144,7 +204,7 @@ Streamberry Logo (inspired by Black Mirror) instead of Jellyfish Logo. Included 
 [Readme.md](/scripts/README.md)
 
 ---
-## 🎨 Colors:
+## 🎨 Colors
 
 <img src="./colors/swatches/banana.png" alt="banana" width="40%"/>
 
@@ -242,6 +302,13 @@ Streamberry Logo (inspired by Black Mirror) instead of Jellyfish Logo. Included 
 ``` css
 @import url("https://cdn.jsdelivr.net/gh/n00bcodr/Jellyfish/colors/watermelon.css");
 ```
+
+## Recommended Plugins
+
+To completely replicate the look in the screenshots you'd need the below plugins installed and configured
+- [jellyfin-plugin-media-bar](https://github.com/IAmParadox27/jellyfin-plugin-media-bar)
+- [jellyfin-plugin-custom-tabs](https://github.com/IAmParadox27/jellyfin-plugin-custom-tabs)
+- [Jellyfin-Enhanced](https://github.com/n00bcodr/Jellyfin-Enhanced/)
 
 ## 🧪 Compatibility
 
