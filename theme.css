@@ -288,6 +288,11 @@ html
     background-color: var(--secondary-background-transparent);
 }
 
+/* Hide backdrop image on homepage to work well with media bar */
+.libraryDocument.withSectionTabs .backdropImage {
+    display: none;
+}
+
 /* Secondary, often slightly transparent, backgrounds for elements like drawers, dialogs, and content sections. */
 .layout-desktop .mainDrawer,                  /* Main navigation drawer (Desktop) */
 .layout-mobile .mainDrawer,                   /* Main navigation drawer (Mobile) */
