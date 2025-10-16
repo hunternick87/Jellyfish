@@ -1,4 +1,4 @@
-.layout-desktop .btnShuffle,
+.layout-desktop .material-icons.detailButton-icon.shuffle,
 .layout-desktop .material-icons.detailButton-icon.check,
 .layout-desktop .material-icons.detailButton-icon.favorite,
 .layout-desktop .material-icons.detailButton-icon.more_vert,
@@ -7,6 +7,7 @@
 {
     display: none;
 }
+.layout-desktop .btnShuffle::after,
 .layout-desktop .btnMoreCommands::after,
 .layout-desktop .btnPlayTrailer::after,
 .layout-desktop .btnPlaystate::after,
