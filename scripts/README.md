@@ -19,6 +19,9 @@ Here's a breakdown of what each script does:
 
 ### [pausescreen.js](pausescreen.js)
 
+> [!IMPORTANT]
+> There will be no updates to this as it will now be maintained using the [Jellyfin-Enhanced](https://github.com/n00bcodr/Jellyfin-Enhanced/) plugin
+
 - Displays a dynamic pause screen overlay when media is paused. It shows the item's logo, details (year, rating, runtime), and a spinning disc art. This is a modified version of the script by [BobHasNoSoul](https://github.com/BobHasNoSoul/Jellyfin-PauseScreen). This also has all the CSS needed in the script itself, so it doesn't need a separate CSS file.
 
 ### [rating.js](rating.js)
