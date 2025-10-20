@@ -1,8 +1,33 @@
+/*
+================================================================================
+|                         JELLYFIN 10.11+ FIXES                                  |
+================================================================================
+*/
+
 .layout-desktop .itemMiscInfo, .layout-desktop .nameContainer {
-    margin-left: -47vw !important;
+    margin-left: -46.5vw !important;
 }
 
 .detailImageContainer {
-    margin-left: -3vw !important;
+    margin-left: -4vw !important;
     margin-top: -4vw !important;
+}
+
+
+div#listChildrenCollapsible {
+    order: 6 !important;
+}
+.nextUpSection  {
+    order: 5 !important;
+}
+.detailSectionContent {
+    order: 0 !important;
+}
+
+.itemDetailsGroup {
+    order: 0 !important;
+}
+
+.collectionItems .sectionTitleContainer-cards {
+    padding-left: 0 !important;
 }
