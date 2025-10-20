@@ -525,7 +525,7 @@ progress::-webkit-progress-value  /* Filled part of the progress bar (WebKit) */
 /* == Header Tabs & Right Section Positioning (Desktop) == */
 /* Fine-tunes positioning and sizing for desktop header elements. */
 .layout-tv .headerTabs, .layout-desktop .headerTabs {
-    margin-bottom: 10vh !important;
+    margin-bottom: 2vh !important;
     margin-left: 60px !important;
     margin-top: -58px !important; /* Negative margin to pull it up relative to other header elements */
     font-size: 12px !important;   /* Custom font size for tabs */
