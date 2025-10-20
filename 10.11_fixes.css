@@ -1,6 +1,6 @@
 /*
 ================================================================================
-|                         JELLYFIN 10.11+ FIXES                                  |
+|                         JELLYFIN 10.11 FIXES                                  |
 ================================================================================
 */
 
@@ -14,11 +14,11 @@
 }
 
 
-div#listChildrenCollapsible {
-    order: 6 !important;
-}
 .nextUpSection  {
     order: 5 !important;
+}
+div#listChildrenCollapsible {
+    order: 6 !important;
 }
 .detailSectionContent {
     order: 0 !important;
