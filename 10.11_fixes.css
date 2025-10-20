@@ -1,0 +1,8 @@
+.layout-desktop .itemMiscInfo, .layout-desktop .nameContainer {
+    margin-left: -47vw !important;
+}
+
+.detailImageContainer {
+    margin-left: -3vw !important;
+    margin-top: -4vw !important;
+}
