@@ -12,6 +12,7 @@ on:
       - 'scripts/**'
       - 'misc.css'
       - 'README.md'
+      - '10.11_fixes.css'
 
   workflow_dispatch:
 
