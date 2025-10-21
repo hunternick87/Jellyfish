@@ -25,7 +25,11 @@ div#listChildrenCollapsible {
 }
 
 .itemDetailsGroup {
-    order: 0 !important;
+    order: 3 !important;
+}
+
+.collectionItems {
+    order: 6 !important;
 }
 
 .collectionItems .sectionTitleContainer-cards {
