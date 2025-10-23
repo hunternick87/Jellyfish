@@ -957,6 +957,11 @@ progress::-webkit-progress-value  /* Filled part of the progress bar (WebKit) */
 
 /* == Card Hover Effects (Outline & Dim) == */
 /* Adds an accent-colored border and a dimming overlay on hover for various card types. */
+
+.cardBox-bottompadded.cardBox > .cardScalable {
+    border: 2px solid transparent; /* Reserve space for hover border */
+}
+
 div.card-withuserdata.card-hoverable.card:hover > .cardBox-bottompadded.cardBox > .cardScalable,
 div.groupedCard.card-hoverable.overflowSquareCard.card:hover > .cardBox-bottompadded.cardBox > .cardScalable,
 div.card-hoverable.squareCard.card:hover > .cardBox-bottompadded.cardBox > .cardScalable {
