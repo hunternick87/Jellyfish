@@ -39,3 +39,9 @@ div#listChildrenCollapsible {
 .mainDetailButtons {
     margin-left: -5em;
 }
+
+.layout-desktop .detailLogo,
+.layout-tv .detailLogo {
+    top: 0% !important;
+
+}
