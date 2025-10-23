@@ -206,3 +206,16 @@
 .verticalSection.IMDB_250 .cardImageContainer::after {
   background-image: url('https://github.com/jackkerouac/aphrodite/blob/main/images/awards/yellow/imdb.png?raw=true');
 }
+
+
+button.headerButton.headerHomeButton.barsMenuButton.headerButtonLeft.paper-icon-button-light {
+    order: -1;
+}
+
+button.headerButton.headerButtonLeft.headerBackButton.paper-icon-button-light {
+    order: -2;
+}
+button.headerButton.mainDrawerButton.barsMenuButton.headerButtonLeft.paper-icon-button-light {
+  order: -3;
+}
+
