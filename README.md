@@ -13,6 +13,19 @@ I've made a few tweaks and modifications of my own.
 
 Login page backgrounds from [@ksushlapush](https://unsplash.com/@ksushlapush)
 
+> [!IMPORTANT]
+> This theme is designed for Jellyfin Version **10.10.7**, there have been a few changes in version 10.11 which cause alignment issues which I am actively trying to fix.
+> 
+> If you are on **Jellyfin Version 10.11**, please add the below import statement along with others.
+> ```css
+> @import url("https://cdn.jsdelivr.net/gh/n00bcodr/jellyfish@main/10.11_fixes.css");
+> ```
+
+> [!NOTE]
+> Jellyfin Version 10.11 has dropped support for admin dashboard theming - https://github.com/jellyfin/jellyfin-web/issues/7220#issuecomment-3427290912
+> 
+> So theming for the admin dashboard does not work, and that is expected.
+
 
 ## 📑 Table of Contents
 
@@ -43,7 +56,7 @@ To apply a theme globally to all users via the Dashboard:
 ```css
    @import url("https://cdn.jsdelivr.net/gh/n00bcodr/jellyfish@main/theme.css");
    @import url("https://cdn.jsdelivr.net/gh/n00bcodr/jellyfish@main/indicators.css");
-   @import url("https://cdn.jsdelivr.net/gh/n00bcodr/jellyfish@main/indicators.css");
+   @import url("https://cdn.jsdelivr.net/gh/n00bcodr/jellyfish@main/progress_bar.css");
    /* Any other imports or custom CSS will go here */
 ```
 3.  **Save Changes**
