@@ -45,3 +45,8 @@ div#listChildrenCollapsible {
     top: 0% !important;
 
 }
+
+.layout-tv .sectionTabs {
+	width: fit-content;
+	margin-inline: auto !important;
+}
