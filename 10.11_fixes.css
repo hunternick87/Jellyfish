@@ -4,9 +4,14 @@
 ================================================================================
 */
 
-.layout-desktop .itemMiscInfo, .layout-desktop .nameContainer {
+.layout-desktop .itemMiscInfo {
     margin-left: -46vw !important;
 }
+
+.layout-desktop .nameContainer {
+    margin-left: -46.5vw !important;
+}
+
 
 .detailImageContainer {
     margin-left: -4vw !important;
@@ -49,4 +54,67 @@ div#listChildrenCollapsible {
 .layout-tv .sectionTabs {
 	width: fit-content;
 	margin-inline: auto !important;
+}
+
+
+/*
+================================================================================
+|                        Dashboard Styles
+|            These do not work natively, need to be injected
+================================================================================
+*/
+
+
+/* Server */
+.css-1787okl, .css-znfy44 {
+  border-radius: 20px !important;
+  background: var(--secondary-background-transparent) !important;
+}
+
+/* Media chips */
+.css-1yr4dn5, .css-lh4h8w, .css-nqwc7a, .css-hkers1, .css-11qg7pw, .css-q0e3wl, .css-wnfue5, .css-46ocr5 {
+  border-radius: 20px !important;
+  background: var(--secondary-background-transparent) !important;
+}
+
+/* Activity, Alerts and Paths */
+.css-1m91j26, .css-1ypqulw {
+  border-radius: 20px !important;
+  padding: 0px !important;
+  background: var(--alt-accent-color) !important;
+}
+
+/* Devices, Plugins Footer */
+.css-4beb5o, .css-sxfj10, .css-1brmtja {
+  background: var(--secondary-background-transparent) !important;
+}
+
+/* Devices Card */
+.css-1yd4q9n {
+  border-radius: 20px !important;
+}
+
+/* Header */
+header.MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation4.MuiAppBar-root.MuiAppBar-colorDefault.MuiAppBar-positionFixed.mui-fixed.css-jz1vtw {
+  background: none !important;
+  box-shadow: none !important;
+}
+
+/* Buttons */
+.MuiStack-root.css-11r6nok button:nth-child(1) {
+  background: rebeccapurple !important;
+  color: white !important;
+}
+.MuiStack-root.css-11r6nok button:nth-child(2) {
+  background: #ff9800 !important;
+  color: white !important;
+}
+.MuiStack-root.css-11r6nok button:nth-child(3) {
+  background: #f44336 !important;
+  color: white !important;
+}
+
+/* Activity list items */
+.MuiList-root:not(.MuiList-subheader) .MuiListItemButton-root.MuiListItemButton-gutters {
+    padding: 10px 30px 10px 30px !important;
 }

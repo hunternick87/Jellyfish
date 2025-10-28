@@ -1316,9 +1316,27 @@ h3.tagline {
     padding: 10px 40px 0px 0px !important;
 }
 
-.nameContainer:has(.itemName.subtitle) .parentName {
-    display: none !important;
+.layout-desktop .nameContainer {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: baseline;
 }
+
+.nameContainer:has(.itemName.subtitle) .parentName {
+    display: block !important;
+    padding-right: 10px;
+}
+
+.nameContainer a.button-link.itemAction.emby-button:hover {
+    transform: scale(1) !important;
+}
+
+.nameContainer:has(.itemName.subtitle) .parentName::after {
+    content: " -";
+}
+
 
 .layout-desktop .nameContainer .itemName.infoText.subtitle {
     margin: 5px 0px !important;
