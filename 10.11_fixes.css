@@ -12,12 +12,10 @@
     margin-left: -46.5vw !important;
 }
 
-
 .detailImageContainer {
     margin-left: -4vw !important;
     margin-top: -8vw !important;
 }
-
 
 .nextUpSection  {
     order: 5 !important;
@@ -45,10 +43,9 @@ div#listChildrenCollapsible {
     margin-left: -5em;
 }
 
-.layout-desktop .detailLogo,
-.layout-tv .detailLogo {
-    top: 0% !important;
-
+.layout-desktop .itemBackdrop,
+.layout-tv .itemBackdrop {
+    height: 45vh !important;
 }
 
 .layout-tv .sectionTabs {
@@ -117,4 +114,73 @@ header.MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation4.MuiAppBar-root.MuiAp
 /* Activity list items */
 .MuiList-root:not(.MuiList-subheader) .MuiListItemButton-root.MuiListItemButton-gutters {
     padding: 10px 30px 10px 30px !important;
+}
+
+/* Links */
+.css-c4z1po {
+    color: var(--primary-accent-color);
+    --Link-underlineColor: var(--primary-accent-color);
+}
+
+/* save button and help button*/
+.css-ybuz3k, .fab, .raised {
+    color: var(--text-color);
+    background: var(--primary-accent-color);
+}
+
+/* Switches */
+
+.css-1fmeo47.Mui-checked {
+    color: var(--primary-accent-color);
+}
+.css-1fmeo47.Mui-checked + .MuiSwitch-track {
+    background-color:  var(--secondary-accent-color);
+}
+
+/* Branding buttons */
+.css-1vcmsp6, .css-nu23t2 {
+    border-radius: 15px;
+    font-weight: 600;
+}
+
+
+/* Devices Table */
+.css-mq8hip, tr, tr.MuiTableRow-root.css-vag9oz, .css-j5zxs1, tr.MuiTableRow-root.css-1cksag5  {
+    background-color: transparent !important;
+}
+
+/* Table Headers */
+.css-wsew38 {
+    justify-content: flex-end;
+}
+
+input.PrivateSwitchBase-input.css-j8yymo, .css-5191sg.Mui-focused {
+    color: var(--primary-accent-color) !important;
+}
+
+.css-1y99tin::after, .css-g193a2::after {
+  border-bottom: 1px solid var(--primary-accent-color);
+}
+
+/* Checkboxes */
+span.MuiButtonBase-root.MuiCheckbox-root.MuiCheckbox-colorPrimary.MuiCheckbox-sizeMedium.PrivateSwitchBase-root.MuiCheckbox-root.MuiCheckbox-colorPrimary.MuiCheckbox-sizeMedium.Mui-checked.MuiCheckbox-root.MuiCheckbox-colorPrimary.MuiCheckbox-sizeMedium.css-1a194ku {
+    color: var(--primary-accent-color);
+}
+
+/* Buttons in plugin page */
+.css-1ejoxfo, .css-1ejoxfo:hover, .css-1ejoxfo.Mui-focusVisible {
+    background-color: var(--primary-accent-color);
+}
+/* manage repository button */
+.css-cr7oyo {
+    background-color: var(--secondary-accent-color);
+    color: var(--text-color);
+    border-radius: 20px;
+    font-weight: 500;
+    border: 0;
+}
+
+/* Progress % for scheduled tasks */
+.MuiBox-root.css-lmbv6g {
+    color: var(--primary-accent-color);
 }
