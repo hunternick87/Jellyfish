@@ -14,6 +14,11 @@
 @import url("https://cdn.jsdelivr.net/gh/n00bcodr/Jellyfish/loginpage.css");
 @import url("https://cdn.jsdelivr.net/gh/n00bcodr/Jellyfish/colors/jellyblue.css");
 
+/* Force size for slindes */
+#slides-container {
+	height: 70% !important;
+}
+
 /* ~~~~~~~~~~~~~~~~~~~~ GLOBAL CSS VARIABLES ~~~~~~~~~~~~~~~~~~~~ */
 /* Defines core variables used throughout the theme for consistency. */
 :root {
