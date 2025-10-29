@@ -2119,7 +2119,7 @@ h3.tagline {
 /* Addresses issues with the first content section overlapping the media bar (Now Playing bar) and standardizes fonts in that area. */
 
 .homeSectionsContainer {
-    top: 69vh !important;
+    top: 55vh !important;
 }
 
 /* Standardizes font family for various text elements often found near or related to the media bar. */
